@@ -278,89 +278,60 @@
 
     <!-- Contact Section -->
     <section class="contact-section">
-        <div class="contact-container">
-            <div class="contact-header">
-                <h1 class="contact-title">Get in <span class="highlight-orange">Touch</span></h1>
-                <p class="contact-subtitle">Have questions about HydraX? We'd love to hear from you. Send us a message
-                    and we'll respond as soon as possible.</p>
+        <div class="contact-wrapper">
+            <!-- Left Side -->
+            <div class="contact-left">
+                <div class="info-box">
+                    <h2 class="info-title">Let's Connect</h2>
+                    <p class="info-subtitle">We’re here to answer your questions and support your journey with HydraX.
+                    </p>
+
+                    <div class="info-item">
+                        <span class="info-icon">📧</span>
+                        <div class="info-texts">
+                            <h3>Email</h3>
+                            <p>Coming soon!</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📞</span>
+                        <div class="info-texts">
+                            <h3>Phone</h3>
+                            <p>+91 8939864625</p>
+                        </div>
+                    </div>
+
+                    <div class="info-item">
+                        <span class="info-icon">📍</span>
+                        <div class="info-texts">
+                            <h3>Office</h3>
+                            <p>Coming soon!</p>
+                        </div>
+                    </div>
+
+                    <div class="support-badge">
+                        <span class="support-icon">🕒</span>
+                        <span class="support-text">24/7 Customer Support</span>
+                    </div>
+                </div>
             </div>
 
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h2 class="contact-info-title">Contact Information</h2>
-
-                    <div class="contact-item">
-                        <div class="contact-icon email-icon">✉</div>
-                        <div class="contact-details">
-                            <span class="contact-label">Email</span>
-                            <span class="contact-value">Coming soon!</span>
-                        </div>
+            <!-- Right Side Form -->
+            <div class="contact-right">
+                <h2 class="form-title">Send a Message</h2>
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" name="fullName" placeholder="Full Name" required>
+                        <input type="email" name="email" placeholder="Email Address" required>
                     </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon phone-icon">📞</div>
-                        <div class="contact-details">
-                            <span class="contact-label">Phone</span>
-                            <span class="contact-value">+91 8939864625</span>
-                        </div>
-                    </div>
-
-                    <div class="contact-item">
-                        <div class="contact-icon location-icon">📍</div>
-                        <div class="contact-details">
-                            <span class="contact-label">Office</span>
-                            <span class="contact-value">Coming soon!</span>
-                        </div>
-                    </div>
-
-                    <div class="quick-response">
-                        <h3 class="quick-response-title">Quick Response</h3>
-                        <p class="quick-response-text">We typically respond to inquiries within 24 hours. For urgent
-                            matters, please call our support line directly.</p>
-                        <div class="support-badge">
-                            <span class="support-icon">🕒</span>
-                            <span class="support-text">24/7 Customer Support</span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form">
-                    <form class="contact-form-container">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="fullName" class="form-label">Full Name</label>
-                                <input type="text" id="fullName" name="fullName" class="form-input"
-                                    placeholder="Enter name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="email" class="form-label">Email Address</label>
-                                <input type="email" id="email" name="email" class="form-input" placeholder="Enter mail"
-                                    required>
-                            </div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject" class="form-label">Subject</label>
-                            <input type="text" id="subject" name="subject" class="form-input"
-                                placeholder="How can we help you?" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message" class="form-label">Message</label>
-                            <textarea id="message" name="message" class="form-textarea"
-                                placeholder="Tell us more about your inquiry..." rows="6" required></textarea>
-                        </div>
-
-                        <button type="submit" class="contact-submit-btn">
-                            <span class="btn-icon">✈</span>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
+                    <input type="text" name="subject" placeholder="Subject" required>
+                    <textarea name="message" placeholder="Your Message..." rows="6" required></textarea>
+                    <button type="submit" class="send-btn">✈ Send Message</button>
+                </form>
             </div>
         </div>
     </section>
-
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
