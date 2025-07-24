@@ -176,36 +176,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (accountIcon) {
         accountIcon.addEventListener('click', function (e) {
             e.preventDefault();
-            // Show coming soon overlay with custom message
-            if (comingSoonOverlay) {
-                // Temporarily change the message for account
-                const comingSoonTitle = document.querySelector('.coming-soon-title');
-                const comingSoonSubtitle = document.querySelector('.coming-soon-subtitle');
-                const originalTitle = comingSoonTitle.textContent;
-                const originalSubtitle = comingSoonSubtitle.textContent;
-
-                comingSoonTitle.textContent = 'Coming Soon!';
-                comingSoonSubtitle.textContent = 'We are building your space... personalized, powerful, and worth the wait.';
-
-                comingSoonOverlay.classList.add('active');
-                document.body.style.overflow = 'hidden';
-
-                // Reset the message when overlay is closed
-                const resetMessage = () => {
-                    comingSoonTitle.textContent = originalTitle;
-                    comingSoonSubtitle.textContent = originalSubtitle;
-                };
-
-                // Add one-time event listeners to reset message
-                comingSoonClose.addEventListener('click', resetMessage, { once: true });
-                comingSoonOverlay.addEventListener('click', function (e) {
-                    if (e.target === comingSoonOverlay) {
-                        resetMessage();
-                    }
-                }, { once: true });
-
-                console.log('Account icon clicked - Creating your Hydrax profile…');
-            }
+            // Navigate to login page
+            window.location.href = 'login.html';
+            console.log('Account icon clicked - Redirecting to login page...');
         });
     }
 
