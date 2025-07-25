@@ -27,12 +27,29 @@
             </div>
 
             <div class="terms">
-                <a href="#">Privacy</a> · <a href="#">Terms</a>
+                <a href="#" id="privacy-link">Privacy</a> · <a href="#" id="terms-link">Terms</a>
             </div>
 
             <div class="back-home">
                 <a href="index.html">← Back to Home</a>
             </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay" id="coming-soon-overlay">
+        <div class="coming-soon-content">
+            <div class="coming-soon-loader">
+                <div class="loader-spinner"></div>
+                <div class="loader-dots">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <h2 class="coming-soon-title">Coming Soon</h2>
+            <p class="coming-soon-subtitle">We're working hard to bring you the best shopping experience!</p>
+            <button class="coming-soon-close" id="coming-soon-close">✕</button>
         </div>
     </div>
 
@@ -51,6 +68,54 @@
                 switchText.innerHTML = `Don't have an account? <a href="#" onclick="switchMode()">Sign up</a>`;
             }
         }
+
+        // Coming Soon functionality for Privacy and Terms
+        document.addEventListener('DOMContentLoaded', function () {
+            const privacyLink = document.getElementById('privacy-link');
+            const termsLink = document.getElementById('terms-link');
+            const comingSoonOverlay = document.getElementById('coming-soon-overlay');
+            const comingSoonClose = document.getElementById('coming-soon-close');
+
+            function showComingSoon() {
+                comingSoonOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function hideComingSoon() {
+                comingSoonOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+
+            // Privacy link click handler
+            if (privacyLink) {
+                privacyLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showComingSoon();
+                });
+            }
+
+            // Terms link click handler
+            if (termsLink) {
+                termsLink.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    showComingSoon();
+                });
+            }
+
+            // Close button click handler
+            if (comingSoonClose) {
+                comingSoonClose.addEventListener('click', hideComingSoon);
+            }
+
+            // Close when clicking outside the modal
+            if (comingSoonOverlay) {
+                comingSoonOverlay.addEventListener('click', function (e) {
+                    if (e.target === comingSoonOverlay) {
+                        hideComingSoon();
+                    }
+                });
+            }
+        });
     </script>
 </body>
 

@@ -15,40 +15,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    position: relative;
-    overflow: hidden;
-}
-
-/* Animated background similar to main site */
-body::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(45deg,
-            rgba(0, 194, 255, 0.1) 0%,
-            rgba(0, 0, 0, 0.9) 25%,
-            rgba(0, 194, 255, 0.05) 50%,
-            rgba(0, 0, 0, 0.9) 75%,
-            rgba(0, 194, 255, 0.1) 100%);
-    animation: backgroundShift 10s ease-in-out infinite;
-    z-index: 1;
-}
-
-@keyframes backgroundShift {
-
-    0%,
-    100% {
-        background-position: 0% 50%;
-        transform: rotate(0deg);
-    }
-
-    50% {
-        background-position: 100% 50%;
-        transform: rotate(2deg);
-    }
+    overflow-x: hidden;
 }
 
 .auth-container {
@@ -57,116 +24,95 @@ body::before {
     align-items: center;
     width: 100%;
     padding: 20px;
-    position: relative;
-    z-index: 10;
 }
 
 .auth-card {
-    background: linear-gradient(135deg,
-            rgba(255, 255, 255, 0.1) 0%,
-            rgba(0, 194, 255, 0.05) 50%,
-            rgba(255, 255, 255, 0.1) 100%);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 60px 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 50px 40px;
     width: 100%;
-    max-width: 450px;
-    border-radius: 25px;
-    box-shadow: 0 25px 80px rgba(0, 194, 255, 0.15);
+    max-width: 400px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
     text-align: center;
-    position: relative;
-    transform: translateY(0);
-    transition: all 0.3s ease;
-}
-
-.auth-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 30px 100px rgba(0, 194, 255, 0.25);
 }
 
 .logo {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #00C2FF;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
     font-weight: 700;
-    text-shadow: 0 0 20px rgba(0, 194, 255, 0.5);
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
 .logo span {
     color: #ffffff;
-    text-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
     margin: 15px 0;
     color: #ffffff;
     font-weight: 600;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1rem;
     color: #cccccc;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     line-height: 1.5;
 }
 
 .auth-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 15px;
 }
 
 .auth-form input {
-    padding: 18px 24px;
-    font-size: 1.1rem;
+    padding: 15px 20px;
+    font-size: 1rem;
     background: rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 15px;
+    border-radius: 8px;
     color: #ffffff;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 
 .auth-form input::placeholder {
-    color: #8695a3;
+    color: #888888;
 }
 
 .auth-form input:focus {
     outline: none;
     background: rgba(255, 255, 255, 0.12);
     border-color: #00C2FF;
-    box-shadow: 0 0 0 3px rgba(0, 194, 255, 0.2);
-    transform: translateY(-2px);
 }
 
 .auth-form button {
     margin-top: 10px;
-    padding: 16px;
+    padding: 18px 40px;
     background: #00C2FF;
     color: white;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 1.1rem;
     border: none;
     border-radius: 50px;
     cursor: pointer;
     transition: all 0.3s ease;
     text-transform: uppercase;
     letter-spacing: 1px;
-    box-shadow: 0 10px 30px rgba(0, 194, 255, 0.3);
 }
 
 .auth-form button:hover {
     background: linear-gradient(135deg, #000000 0%, #000000 100%);
     transform: translateY(-2px);
-    box-shadow: 0 15px 40px rgba(0, 194, 255, 0.4);
 }
 
 .switch {
-    margin-top: 30px;
-    font-size: 1rem;
+    margin-top: 25px;
+    font-size: 0.95rem;
     color: #cccccc;
 }
 
@@ -174,19 +120,17 @@ h2 {
     color: #00C2FF;
     text-decoration: none;
     font-weight: 600;
-    transition: all 0.3s ease;
-    text-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
+    transition: color 0.3s ease;
 }
 
 .switch a:hover {
     color: #ffffff;
-    text-shadow: 0 0 15px rgba(0, 194, 255, 0.8);
 }
 
 .terms {
-    margin-top: 35px;
-    font-size: 0.9rem;
-    color: #999999;
+    margin-top: 30px;
+    font-size: 0.85rem;
+    color: #888888;
 }
 
 .terms a {
@@ -200,31 +144,23 @@ h2 {
 }
 
 .back-home {
-    margin-top: 30px;
-    padding-top: 25px;
+    margin-top: 25px;
+    padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .back-home a {
     color: #cccccc;
     text-decoration: none;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
-    border-radius: 25px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    gap: 5px;
 }
 
 .back-home a:hover {
     color: #00C2FF;
-    background: rgba(0, 194, 255, 0.1);
-    border-color: rgba(0, 194, 255, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 194, 255, 0.2);
 }
 
 /* Responsive Design */
@@ -236,21 +172,21 @@ h2 {
     }
 
     .logo {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     h2 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
     }
 
     .subtitle {
-        font-size: 1rem;
-        margin-bottom: 30px;
+        font-size: 0.95rem;
+        margin-bottom: 25px;
     }
 
     .auth-form input {
-        padding: 16px 20px;
-        font-size: 1rem;
+        padding: 14px 18px;
+        font-size: 0.95rem;
     }
 
     .auth-form button {
@@ -262,24 +198,24 @@ h2 {
 @media (max-width: 480px) {
     .auth-card {
         padding: 30px 25px;
-        border-radius: 20px;
+        border-radius: 12px;
     }
 
     .logo {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     h2 {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
     }
 
     .subtitle {
-        font-size: 0.95rem;
+        font-size: 0.9rem;
     }
 
     .auth-form input {
-        padding: 14px 18px;
-        font-size: 0.95rem;
+        padding: 12px 16px;
+        font-size: 0.9rem;
     }
 
     .auth-form button {
@@ -288,7 +224,176 @@ h2 {
     }
 
     .back-home a {
-        font-size: 0.9rem;
-        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}
+
+/* Coming Soon Overlay Styles */
+.coming-soon-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg,
+            rgba(31, 31, 31, 0.8) 0%,
+            rgba(0, 194, 255, 0.1) 25%,
+            rgba(31, 31, 31, 0.8) 50%,
+            rgba(0, 194, 255, 0.1) 75%,
+            rgba(31, 31, 31, 0.8) 100%);
+    backdrop-filter: blur(5px);
+    z-index: 4000;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.coming-soon-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.coming-soon-content {
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.15) 0%,
+            rgba(0, 194, 255, 0.1) 50%,
+            rgba(255, 255, 255, 0.15) 100%);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 60px 40px;
+    text-align: center;
+    position: relative;
+    max-width: 500px;
+    width: 90%;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+    box-shadow: 0 8px 32px rgba(0, 194, 255, 0.1);
+}
+
+.coming-soon-overlay.active .coming-soon-content {
+    transform: scale(1);
+}
+
+.coming-soon-loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.loader-spinner {
+    width: 60px;
+    height: 60px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid #00C2FF;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+}
+
+.loader-dots {
+    display: flex;
+    gap: 8px;
+}
+
+.loader-dots span {
+    width: 8px;
+    height: 8px;
+    background: #00C2FF;
+    border-radius: 50%;
+    animation: bounce 1.4s ease-in-out infinite both;
+}
+
+.loader-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.loader-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+.coming-soon-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.coming-soon-subtitle {
+    font-size: 1.1rem;
+    color: #cccccc;
+    margin-bottom: 0;
+    line-height: 1.5;
+}
+
+.coming-soon-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.coming-soon-close:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Design for Coming Soon */
+@media (max-width: 768px) {
+    .coming-soon-content {
+        padding: 40px 30px;
+        max-width: 90%;
+    }
+
+    .coming-soon-title {
+        font-size: 2rem;
+    }
+
+    .coming-soon-subtitle {
+        font-size: 1rem;
+    }
+
+    .loader-spinner {
+        width: 50px;
+        height: 50px;
     }
 }
