@@ -58,7 +58,7 @@ html {
     transition: transform 0.3s ease;
     vertical-align: middle;
     position: absolute;
-    margin-top: 24px;
+    margin-top: 15px;
     margin-left: 0px;
     margin-right: 130px;
 }
@@ -1984,8 +1984,8 @@ textarea {
 }
 
 .phone-frame {
-    width: 200px;
-    height: 380px;
+    width: 250px;
+    height: 400px;
     background: #ffffff;
     border: 8px solid #000000;
     border-radius: 25px;
