@@ -51,14 +51,14 @@ html {
 }
 
 .nav-logo-img {
-    height: 200px;
+    height: 180px;
     width: auto;
-    max-width: 220px;
+    /* max-width: 220px; */
     object-fit: contain;
     transition: transform 0.3s ease;
     vertical-align: middle;
     position: absolute;
-    margin-top: 25px;
+    margin-top: 24px;
     margin-left: 0px;
     margin-right: 130px;
 }
