@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HydraX Web</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="product-lineup.css"
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
@@ -129,6 +130,122 @@
             <h2 class="coming-soon-title">Coming Soon</h2>
             <p class="coming-soon-subtitle">We're working hard to bring you the best shopping experience!</p>
             <button class="coming-soon-close" id="coming-soon-close">✕</button>
+        </div>
+    </div>
+
+    <!-- Product Lineup Overlay -->
+    <div class="product-lineup-overlay" id="product-lineup-overlay">
+        <div class="product-lineup-container">
+            <div class="product-lineup-header">
+                <h2 class="lineup-title">Choose Your HydraX</h2>
+                <p class="lineup-subtitle">Select the perfect model that matches your hydration needs</p>
+                <button class="lineup-close" id="lineup-close">✕</button>
+            </div>
+
+            <div class="product-cards-grid">
+                <!-- Base Model -->
+                <div class="product-card">
+                    <div class="card-header">
+                        <h3 class="model-title">Essential</h3>
+                        <div class="model-price">$79.99</div>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Temperature Display</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Basic App Integration</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">24-Hour Battery Life</span>
+                        </li>
+                        <li class="feature-item unavailable">
+                            <span class="feature-icon">×</span>
+                            <span class="feature-name">Temperature Control</span>
+                        </li>
+                        <li class="feature-item unavailable">
+                            <span class="feature-icon">×</span>
+                            <span class="feature-name">Smart Reminders</span>
+                        </li>
+                    </ul>
+                    <div class="card-actions">
+                        <button class="btn-learn-more">Buy Now</button>
+                        <button class="btn-compare">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Standard Model -->
+                <div class="product-card featured">
+                    <div class="card-header">
+                        <span class="popular-badge">Most Popular</span>
+                        <h3 class="model-title">Standard</h3>
+                        <div class="model-price">$129.99</div>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Temperature Display & Control</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Full App Integration</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">48-Hour Battery Life</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Smart Reminders</span>
+                        </li>
+                        <li class="feature-item unavailable">
+                            <span class="feature-icon">×</span>
+                            <span class="feature-name">UV Sterilization</span>
+                        </li>
+                    </ul>
+                    <div class="card-actions">
+                        <button class="btn-learn-more">Buy Now</button>
+                        <button class="btn-compare">Learn More</button>
+                    </div>
+                </div>
+
+                <!-- Premium Model -->
+                <div class="product-card">
+                    <div class="card-header">
+                        <h3 class="model-title">Deluxe</h3>
+                        <div class="model-price">$199.99</div>
+                    </div>
+                    <ul class="features-list">
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">All Standard Features</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">UV Sterilization</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">72-Hour Battery Life</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Premium Materials</span>
+                        </li>
+                        <li class="feature-item available">
+                            <span class="feature-icon">✓</span>
+                            <span class="feature-name">Extended Warranty</span>
+                        </li>
+                    </ul>
+                    <div class="card-actions">
+                        <button class="btn-learn-more">Buy Now</button>
+                        <button class="btn-compare">Learn More</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

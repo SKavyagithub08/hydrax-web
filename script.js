@@ -16,6 +16,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const exploreTrigger = document.getElementById('explore-trigger');
     const exploreDropdown = document.querySelector('.explore-dropdown');
 
+    // Product Lineup Overlay Functionality
+    const productLineupOverlay = document.getElementById('product-lineup-overlay');
+    const lineupClose = document.getElementById('lineup-close');
+    const shopNowButtons = document.querySelectorAll('.cta-button, .showcase-cta');
+
     // Cart Overlay Event Listeners
     if (cartTrigger) {
         cartTrigger.addEventListener('click', function (e) {
@@ -107,8 +112,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 cartOverlay.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
-            if (comingSoonOverlay && comingSoonOverlay.classList.contains('active')) {
-                comingSoonOverlay.classList.remove('active');
+            if (productLineupOverlay && productLineupOverlay.classList.contains('active')) {
+                productLineupOverlay.classList.remove('active');
                 document.body.style.overflow = 'auto';
             }
             // Close dropdowns
@@ -166,11 +171,6 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-    // CTA Button functionality
-    const ctaButton = document.querySelector('.cta-button');
-    const comingSoonOverlay = document.getElementById('coming-soon-overlay');
-    const comingSoonClose = document.getElementById('coming-soon-close');
-
     // Account Icon functionality
     const accountIcon = document.querySelector('.fas.fa-user'); // Selects the user icon specifically
     if (accountIcon) {
@@ -182,17 +182,32 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
-    if (ctaButton) {
-        ctaButton.addEventListener('click', function (e) {
+    // Open product lineup overlay when clicking Shop Now buttons
+    shopNowButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
             e.preventDefault();
-            // Show coming soon overlay
-            comingSoonOverlay.classList.add('active');
+            productLineupOverlay.classList.add('active');
             document.body.style.overflow = 'hidden';
-            console.log('Shop Now clicked - Coming Soon shown!');
+        });
+    });
+
+    // Close product lineup overlay when clicking close button
+    if (lineupClose) {
+        lineupClose.addEventListener('click', function() {
+            productLineupOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
         });
     }
 
-    // Coming Soon close functionality
+    // Close product lineup overlay when clicking outside
+    if (productLineupOverlay) {
+        productLineupOverlay.addEventListener('click', function(e) {
+            if (e.target === productLineupOverlay) {
+                productLineupOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
     if (comingSoonClose) {
         comingSoonClose.addEventListener('click', function () {
             comingSoonOverlay.classList.remove('active');
@@ -486,6 +501,33 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (comingSoonClose) {
                     comingSoonClose.addEventListener('click', resetSaleMessage);
                 }
+            }
+        });
+    }
+
+    // Open product lineup overlay when clicking Shop Now buttons
+    shopNowButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+            e.preventDefault();
+            productLineupOverlay.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+    });
+
+    // Close product lineup overlay when clicking close button
+    if (lineupClose) {
+        lineupClose.addEventListener('click', function() {
+            productLineupOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        });
+    }
+
+    // Close product lineup overlay when clicking outside
+    if (productLineupOverlay) {
+        productLineupOverlay.addEventListener('click', function(e) {
+            if (e.target === productLineupOverlay) {
+                productLineupOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
             }
         });
     }
