@@ -357,4 +357,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
+    // Project Cards Flip Functionality
+    const projectCards = document.querySelectorAll('.project-card');
+    
+    projectCards.forEach(card => {
+        card.addEventListener('mouseenter', function() {
+            this.classList.add('flipped');
+        });
+        
+        card.addEventListener('mouseleave', function() {
+            this.classList.remove('flipped');
+        });
+    });
+
 });
